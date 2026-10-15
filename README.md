@@ -62,25 +62,26 @@ A secure, production-grade RESTful API built with **Node.js**, **Express.js**, a
 
 ## Installation & Setup
 1. Clone the repository
-Bash
+```bash
 git clone [https://github.com/](https://github.com/)<YOUR_GITHUB_USERNAME>/HealthCare-Backend.git
 cd HealthCare-Backend
-
+```
 3. Install dependencies
-Bash
+```bash
 npm install
-
+```
 5. Configure environment variables
 Create a .env file in the root directory and populate it based on .env.example:
 
 6. Run the application
-Bash
+```bash
 # Development mode with automatic restart
 npm run dev
 
 # Production mode
 npm start
 The server will initialize on http://localhost:5000.
+```
 
 ## API Endpoints
 
