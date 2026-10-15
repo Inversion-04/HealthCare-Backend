@@ -1,7 +1,6 @@
 const Patient = require("../Models/Patient");
 const Mapping = require("../Models/Mapping");
 
-// Safe helper to extract authenticated user's ID
 
 const getUserId = (user) => (user?._id || user?.id || user?.userId)?.toString();
 
