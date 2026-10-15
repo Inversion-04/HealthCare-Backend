@@ -39,11 +39,11 @@ A secure, production-grade RESTful API built with **Node.js**, **Express.js**, a
 ├── Controllers/
 │   ├── authController.js     # User registration and login
 │   ├── doctorController.js   # Doctor CRUD handlers
-│   ├── patientController.js  # Patient CRUD handlers
-│   └── mappingController.js  # Patient-doctor assignment logic
+│   ├── mappingController.js  # Patient-doctor assignment logic
+│   └── patientController.js  # Patient CRUD Handlers
 ├── Middlewares/
-│   ├── authMiddleware.js     # JWT token extraction and verification
-│   └── errorHandler.js       # Centralized error formatting
+│   ├── errorHandler.js       # Centralized error formatting
+│   └── fetchUser.js          # JWT token extraction and verification
 ├── Models/
 │   ├── User.js               # User authentication model
 │   ├── Doctor.js             # Doctor schema
