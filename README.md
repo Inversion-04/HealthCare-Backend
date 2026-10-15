@@ -85,13 +85,13 @@ The server will initialize on http://localhost:5000.
 
 ## API Endpoints
 
-# Authentication (/api/auth)
+## Authentication (/api/auth)
 
 Method	  Endpoint	        Description	                          Auth Required
 POST	  /api/auth/register	Register a new user account	              No
 POST	  /api/auth/login	    Log in and receive JWT token / cookie	    No
 
-# Doctors (/api/doctors)
+## Doctors (/api/doctors)
 
 Method	  Endpoint	      Description        	            Auth Required
 POST	  /api/doctors	    Add a new doctor	                Yes
@@ -100,7 +100,7 @@ GET	    /api/doctors/:id	Get single doctor details by ID	  Yes
 PUT	    /api/doctors/:id	Update doctor information	        Yes
 DELETE	/api/doctors/:id	Remove a doctor	                  Yes
 
-# Patients (/api/patients)
+## Patients (/api/patients)
 
 Method	    Endpoint	            Description	                                Auth Required
 POST	      /api/patients	      Register a new patient (sets createdBy)	            Yes
@@ -109,7 +109,7 @@ GET	        /api/patients/:id	  Get details of a specific patient	              
 PUT	        /api/patients/:id	  Update patient record (owner only)	                Yes
 DELETE	    /api/patients/:id	  Delete patient record (owner only)	                Yes
 
-# Mappings (/api/mappings)
+## Mappings (/api/mappings)
 
 Method	        Endpoint	                        Description	                                      Auth Required
 POST	          /api/mappings	                  Assign a doctor to a patient	                             Yes
