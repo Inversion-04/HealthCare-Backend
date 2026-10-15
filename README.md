@@ -66,54 +66,21 @@ A secure, production-grade RESTful API built with **Node.js**, **Express.js**, a
 git clone [https://github.com/](https://github.com/)<YOUR_GITHUB_USERNAME>/HealthCare-Backend.git
 cd HealthCare-Backend
 ```
-3. Install dependencies
+2. Install dependencies
 ```bash
 npm install
 ```
-5. Configure environment variables
+3. Configure environment variables
 Create a .env file in the root directory and populate it based on .env.example:
 
-6. Run the application
+4. Run the application
 ```bash
 # Development mode with automatic restart
 npm run dev
 
 # Production mode
 npm start
-The server will initialize on http://localhost:5000.
 ```
+The server will initialize on http://localhost:5000.
 
-## API Endpoints
-
-## Authentication (/api/auth)
-
-Method	  Endpoint	        Description	                          Auth Required
-POST	  /api/auth/register	Register a new user account	              No
-POST	  /api/auth/login	    Log in and receive JWT token / cookie	    No
-
-## Doctors (/api/doctors)
-
-Method	  Endpoint	      Description        	            Auth Required
-POST	  /api/doctors	    Add a new doctor	                Yes
-GET	    /api/doctors	    Get all registered doctors	      Yes
-GET	    /api/doctors/:id	Get single doctor details by ID	  Yes
-PUT	    /api/doctors/:id	Update doctor information	        Yes
-DELETE	/api/doctors/:id	Remove a doctor	                  Yes
-
-## Patients (/api/patients)
-
-Method	    Endpoint	            Description	                                Auth Required
-POST	      /api/patients	      Register a new patient (sets createdBy)	            Yes
-GET	        /api/patients	      Fetch patients created by authenticated user	      Yes
-GET	        /api/patients/:id	  Get details of a specific patient	                  Yes
-PUT	        /api/patients/:id	  Update patient record (owner only)	                Yes
-DELETE	    /api/patients/:id	  Delete patient record (owner only)	                Yes
-
-## Mappings (/api/mappings)
-
-Method	        Endpoint	                        Description	                                      Auth Required
-POST	          /api/mappings	                  Assign a doctor to a patient	                             Yes
-GET	           /api/mappings	                  View all active patient-doctor mappings	                   Yes
-GET	          /api/mappings/:patient_id	        View all doctors assigned to a specific patient	           Yes
-DELETE	     /api/mappings/:id	                Delete a specific mapping	                                 Yes
 
