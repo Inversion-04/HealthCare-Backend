@@ -83,4 +83,46 @@ npm start
 ```
 The server will initialize on http://localhost:5000.
 
+## API Documentation
 
+### 1. Authentication (`/api/auth`)
+
+| Method | Endpoint | Description | Auth Required |
+| :--- | :--- | :--- | :---: |
+| `POST` | `/api/auth/register` | Register a new user | No |
+| `POST` | `/api/auth/login` | Login and get token / cookie | No |
+
+---
+
+### 2. Doctors (`/api/doctors`)
+
+| Method | Endpoint | Description | Auth Required |
+| :--- | :--- | :--- | :---: |
+| `POST` | `/api/doctors` | Add a new doctor | Yes |
+| `GET` | `/api/doctors` | Get all registered doctors | Yes |
+| `GET` | `/api/doctors/:id` | Get doctor details by ID | Yes |
+| `PUT` | `/api/doctors/:id` | Update doctor details | Yes |
+| `DELETE` | `/api/doctors/:id` | Delete doctor and associated mappings | Yes |
+
+---
+
+### 3. Patients (`/api/patients`)
+
+| Method | Endpoint | Description | Auth Required |
+| :--- | :--- | :--- | :---: |
+| `POST` | `/api/patients` | Register a new patient | Yes |
+| `GET` | `/api/patients` | Get patients created by logged-in user | Yes |
+| `GET` | `/api/patients/:id` | Get patient details by ID | Yes |
+| `PUT` | `/api/patients/:id` | Update patient record (owner only) | Yes |
+| `DELETE` | `/api/patients/:id` | Delete patient record (owner only) | Yes |
+
+---
+
+### 4. Doctor-Patient Mappings (`/api/mappings`)
+
+| Method | Endpoint | Description | Auth Required |
+| :--- | :--- | :--- | :---: |
+| `POST` | `/api/mappings` | Assign a doctor to a patient | Yes |
+| `GET` | `/api/mappings` | Get all doctor-patient assignments | Yes |
+| `GET` | `/api/mappings/:patient_id` | Get all doctors assigned to a specific patient | Yes |
+| `DELETE` | `/api/mappings/:id` | Remove a doctor assignment | Yes |
